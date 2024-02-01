@@ -23,7 +23,7 @@
         </Grid>
         <Label Text="Proporcionar datos" TextColor="Black" FontAttributes="Bold"
                FontSize="20" Margin="0,20,0,0"/>
-        <Grid IsVisible="True">
+        <Grid IsVisible="{Binding Vimc}">
             <Entry Text="{Binding Peso}" Keyboard="Numeric" Placeholder="Peso" Grid.Column="0"
                    Grid.Row="0"/>
             <Entry Text="{Binding Altura}" Keyboard="Numeric" Placeholder="Altura" Grid.Column="1"
@@ -37,13 +37,14 @@
             <Entry Keyboard="Numeric" Text="{Binding Latidos}" Placeholder="Latidos" Grid.Column="0"
                    Grid.Row="1" Margin="20,0,250,0"/>
             <Button Text="CALCULAR" HorizontalOptions="End"
-                    Grid.Column="0" Grid.Row="2"/>
+                    Grid.Column="0" Grid.Row="2" Command="{Binding FCNcommand}"/>
         </Grid>
         <Label Text="Respuesta" FontSize="25" HorizontalOptions="Center"
-               TextColor="Black" IsVisible="False"/>
+               TextColor="Black" IsVisible="{Binding R}"/>
         <Image Source="https://i.ibb.co/JBGxzQh/crisis.png"
-               IsVisible="False"/>
+               IsVisible="{Binding Img1}">
+        </Image>
         <Image Source="https://i.ibb.co/mNyDR4Z/comprobar.png"
-               IsVisible="False"/>
+               IsVisible="{Binding Img2}"/>
     </StackLayout>
 </ContentPage>
